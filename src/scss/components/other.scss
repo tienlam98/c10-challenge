@@ -1,0 +1,19 @@
+@use "../utils" as *;
+@use "../globals" as *;
+
+.testimonial {
+    & > h1 {
+        font-size: 50px;
+    }
+}
+// Author Component
+.author {
+}
+
+// Heading Component
+.heading {
+}
+
+// Detail Component
+.detail {
+}

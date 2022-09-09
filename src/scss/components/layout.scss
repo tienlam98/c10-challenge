@@ -1,0 +1,81 @@
+@use "../utils" as *;
+@use "../globals" as *;
+
+// Testimonial Section
+.testimonial {
+    padding: 100px 70px;
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto auto;
+        gap: 20px;
+    }
+    &__item {
+        &--violet {
+            @include area(
+                $row-start: 1,
+                $row-end: 2,
+                $col-start: 1,
+                $col-end: 3,
+                $bg: var(--color-violet),
+                $color: var(--color-white)
+
+            );
+
+        }
+        &--grey {
+            @include area(
+                $row-start: 1,
+                $row-end: 2,
+                $col-start: 3,
+                $col-end: span 1,
+                $bg: var(--color-grey),
+                $color: var(--color-white)
+
+            );
+
+        }
+        &--white {
+            @include area(
+                $row-start: 2,
+                $row-end: 3,
+                $col-start: 1,
+                $col-end: span 1,
+                $bg: var(--color-dark-grey),
+                $color: var(--color-white)
+
+            );
+
+        }
+        &--dark-grey {
+            @include area(
+                $row-start: 2,
+                $row-end: 3,
+                $col-start: 2,
+                $col-end: span 2,
+                $bg: var(--color-dark-grey),
+                $color: var(--color-white)
+
+            );
+
+        }
+        --dark-white-long {
+            @include area(
+                $row-start: 1,
+                $row-end: 3,
+                $col-start: 4,
+                $col-end: span 1,
+                $bg: var(--color-white),
+                $color: var(--color-dark-grey)
+
+            );
+
+        }
+    }
+}
+
+// Footer Section
+.footer {
+    margin: rem(30);
+    text-align: center;
+}
